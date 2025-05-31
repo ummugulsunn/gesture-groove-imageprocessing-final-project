@@ -15,11 +15,11 @@ GestureGroove, bilgisayarlı görü ve makine öğrenmesi teknikleri kullanarak:
 
 ## 👥 Geliştirici Ekibi
 
-| Ekip Üyesi | Görev Alanı | Ana Sorumluluğu |
-|------------|-------------|-----------------|
-| **🟦 Ayşenur** | Computer Vision & Gesture Recognition | MediaPipe entegrasyonu, el algılama optimizasyonu, hareket sınıflandırma algoritmaları |
-| **🟨 Ümmü Gülsün** | Audio Engine & Music Processing | Ses sentezi, enstrüman sistemi, ses efektleri, Beat Challenge audio engine |
-| **🟩 Sueda** | UI/UX & System Integration | Tkinter arayüzü, kullanıcı deneyimi, sistem entegrasyonu, görselleştirme |
+| Görev Alanı | Ana Sorumluluğu |
+|-------------|-----------------|
+| **🟦 Computer Vision & Gesture Recognition** | MediaPipe entegrasyonu, el algılama optimizasyonu, hareket sınıflandırma algoritmaları |
+| **🟨 Audio Engine & Music Processing** | Ses sentezi, enstrüman sistemi, ses efektleri, Beat Challenge audio engine |
+| **🟩 UI/UX & System Integration** | Tkinter arayüzü, kullanıcı deneyimi, sistem entegrasyonu, görselleştirme |
 
 ## 🚀 Özellikler
 
