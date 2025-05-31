@@ -1,6 +1,6 @@
 """
-Gesture Recognition Module
-Hand gesture recognition system to be developed by Ayşenur
+Hand gesture recognition system
+Real-time hand detection and gesture classification
 """
 
 from .hand_detector import HandDetector

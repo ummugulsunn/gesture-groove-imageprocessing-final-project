@@ -1,7 +1,7 @@
 """
-GestureGroove: Music Player with Hand Gestures
-Main package file
+GestureGroove - Hand Gesture Music Player
+Image Processing Course Project
 """
- 
+
 __version__ = "1.0.0"
-__author__ = "Ayşenur, Ümmu Gülsün, Sueda" 
+__author__ = "Ümmü Gülsün" 

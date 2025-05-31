@@ -3,7 +3,7 @@
 GestureGroove Main Application
 Application that plays music with hand gestures
 
-Development Team: Ayşenur, Ümmu Gülsün, Sueda
+Development Team: Ümmü Gülsün
 Course: Image Processing
 """
 
@@ -79,7 +79,7 @@ class GestureGrooveApp:
     def init_components(self):
         """Initializes core components"""
         try:
-            # Hand detection system (Ayşenur's module)
+            # Hand detection system (Ümmü Gülsün's module)
             self.hand_detector = HandDetector(
                 max_num_hands=self.config['hand_detection']['max_num_hands'],
                 min_detection_confidence=self.config['hand_detection']['min_detection_confidence'],
@@ -87,7 +87,7 @@ class GestureGrooveApp:
             )
             print("✅ Hand detection system ready")
             
-            # Gesture classifier (Ayşenur's module)
+            # Gesture classifier (Ümmü Gülsün's module)
             self.gesture_classifier = GestureClassifier()
             print("✅ Gesture classifier ready")
             
@@ -206,7 +206,7 @@ class GestureGrooveApp:
             # Flip the image (selfie mode)
             frame = cv2.flip(frame, 1)
             
-            # Detect hands (Ayşenur's module)
+            # Detect hands (Ümmü Gülsün's module)
             processed_frame, hand_landmarks = self.hand_detector.detect_hands(frame)
             
             # Gesture recognition
@@ -637,7 +637,7 @@ def main():
     print("=" * 60)
     print("🎵 GestureGroove: El Hareketleriyle Müzik Çalan Uygulama")
     print("📚 Image Processing Dersi Projesi")
-    print("�� Geliştirici Ekibi: Ayşenur, Ümmu Gülsün, Sueda")
+    print("👩‍💻 Geliştirici: Ümmü Gülsün")
     print("=" * 60)
     
     try:

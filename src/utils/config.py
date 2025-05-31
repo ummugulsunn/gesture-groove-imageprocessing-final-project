@@ -9,7 +9,7 @@ from typing import Dict, Any
 # Project information
 PROJECT_NAME = "GestureGroove"
 VERSION = "1.0.0"
-AUTHORS = ["Ayşenur", "Ümmu Gülsün", "Sueda"]
+AUTHORS = ["Ümmü Gülsün"]
 
 # File paths
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))

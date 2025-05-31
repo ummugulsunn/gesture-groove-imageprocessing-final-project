@@ -18,7 +18,7 @@ GestureGroove, bilgisayarlı görü ve makine öğrenmesi teknikleri kullanarak:
 | Ekip Üyesi | Görev Alanı | Ana Sorumluluğu |
 |------------|-------------|-----------------|
 | **🟦 Ayşenur** | Computer Vision & Gesture Recognition | MediaPipe entegrasyonu, el algılama optimizasyonu, hareket sınıflandırma algoritmaları |
-| **🟨 Ümmu Gülsün** | Audio Engine & Music Processing | Ses sentezi, enstrüman sistemi, ses efektleri, Beat Challenge audio engine |
+| **🟨 Ümmü Gülsün** | Audio Engine & Music Processing | Ses sentezi, enstrüman sistemi, ses efektleri, Beat Challenge audio engine |
 | **🟩 Sueda** | UI/UX & System Integration | Tkinter arayüzü, kullanıcı deneyimi, sistem entegrasyonu, görselleştirme |
 
 ## 🚀 Özellikler
@@ -147,7 +147,7 @@ python -c "import pygame; print('✅ Pygame:', pygame.version.ver)"
 ```
 gesturegroove/
 ├── src/
-│   ├── gesture_recognition/    # 🟦 Ayşenur - El algılama
+│   ├── gesture_recognition/    # 👩‍💻 Ümmü Gülsün - Hand detection
 │   ├── audio_engine/          # 🟨 Ümmu Gülsün - Ses sistemi  
 │   ├── ui/                    # 🟩 Sueda - Kullanıcı arayüzü
 │   ├── utils/                 # Ortak araçlar
