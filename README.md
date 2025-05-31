@@ -86,16 +86,16 @@ sudo apt install python3.11 python3.11-venv python3.11-tk
 
 ```bash
 # Projeyi klonlayın
-git clone [repository-url]
-cd gesturegroove
+git clone https://github.com/ummugulsunn/gesture-groove-imageprocessing-final-project.git
+cd gesture-groove-imageprocessing-final-project
 
 # Python 3.11 ile virtual environment oluşturun
-python3.11 -m venv gesturegroove_env
+python3.11 -m venv .venv
 
 # Environment'ı aktive edin
-source gesturegroove_env/bin/activate  # macOS/Linux
+source .venv/bin/activate  # macOS/Linux
 # VEYA
-gesturegroove_env\Scripts\activate  # Windows
+.venv\Scripts\activate  # Windows
 
 # Gerekli paketleri kurun
 pip install -r requirements.txt
@@ -107,6 +107,11 @@ python src/main.py
 ### 3️⃣ Doğrulama Testleri
 
 ```bash
+# Virtual environment'ın aktif olduğundan emin olun
+source .venv/bin/activate  # macOS/Linux
+# VEYA
+.venv\Scripts\activate  # Windows
+
 # MediaPipe testi
 python -c "import mediapipe as mp; print('✅ MediaPipe:', mp.__version__)"
 
