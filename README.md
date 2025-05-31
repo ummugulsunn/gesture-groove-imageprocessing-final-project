@@ -1,79 +1,71 @@
-# 🎵 GestureGroove: El Hareketleriyle Müzik Çalan Uygulama
+# 🎵 GestureGroove: Music Playing Application with Hand Gestures
 
-**İstanbul Sağlık ve Teknoloji Üniversitesi - Image Processing Dersi Final Projesi**
+**Istanbul Health and Technology University - Image Processing Course Final Project**
 
-El hareketlerini algılayarak gerçek zamanlı müzik çalan interaktif uygulama.
+An interactive application that plays music in real-time by detecting hand gestures, developed as a solo project.
 
-## 🎯 Proje Özeti
+## 🎯 Project Overview
 
-GestureGroove, bilgisayarlı görü ve makine öğrenmesi teknikleri kullanarak:
-- **El hareketlerini gerçek zamanlı algılar** (MediaPipe tabanlı)
-- **Farklı hareket türlerini sınıflandırır** (açık el, yumruk, işaret parmağı vb.)
-- **Her hareket için farklı müzik sesleri çalar** (Piano, Drums, Synth)
-- **Beat Challenge modu** ile ritim oyunları sunar
-- **Çoklu enstrüman desteği** ve ses efektleri sağlar
+GestureGroove uses computer vision and machine learning techniques to:
+- **Detect hand gestures in real-time** (MediaPipe-based)
+- **Classify different types of movements** (open hand, fist, pointing finger, etc.)
+- **Play different musical sounds for each gesture** (Piano, Drums, Synth)
+- **Offer rhythm games with Beat Challenge mode**
+- **Provide multi-instrument support** and sound effects
 
-## 👥 Geliştirici Ekibi
+## 🚀 Features
 
-| Görev Alanı | Ana Sorumluluğu |
-|-------------|-----------------|
-| **🟦 Computer Vision & Gesture Recognition** | MediaPipe entegrasyonu, el algılama optimizasyonu, hareket sınıflandırma algoritmaları |
-| **🟨 Audio Engine & Music Processing** | Ses sentezi, enstrüman sistemi, ses efektleri, Beat Challenge audio engine |
-| **🟩 UI/UX & System Integration** | Tkinter arayüzü, kullanıcı deneyimi, sistem entegrasyonu, görselleştirme |
+### ✅ Developed Features
+- ✅ **MediaPipe Hand Detection**: Precise 21-point landmark detection
+- ✅ **5 Different Gestures**: Open hand, fist, up/down pointing, peace sign
+- ✅ **3 Instrument Packages**: Piano, Drums, Synth (15 sounds total)
+- ✅ **Beat Challenge Mode**: Rhythmic game system
+- ✅ **Real-time Processing**: 30+ FPS performance
+- ✅ **Modern UI**: Tkinter-based professional interface
+- ✅ **Sound Effects**: Reverb, delay, wave synthesis
+- ✅ **Dual Hand Support**: Simultaneous multi-hand detection
 
-## 🚀 Özellikler
-
-### ✅ Geliştirilmiş Özellikler
-- ✅ **MediaPipe El Algılama**: Hassas 21-nokta landmark tespiti
-- ✅ **5 Farklı Hareket**: Açık el, yumruk, yukarı/aşağı işaret, barış
-- ✅ **3 Enstrüman Paketi**: Piano, Drums, Synth (toplam 15 ses)
-- ✅ **Beat Challenge Modu**: Ritmik oyun sistemi  
-- ✅ **Gerçek Zamanlı İşleme**: 30+ FPS performans
-- ✅ **Modern UI**: Tkinter tabanlı profesyonel arayüz
-- ✅ **Ses Efektleri**: Reverb, delay, wave synthesis
-- ✅ **İki El Desteği**: Aynı anda çoklu el algılama
-
-### 🔧 Teknik Özellikler
+### 🔧 Technical Features
 - **Computer Vision**: MediaPipe Hands (Google)
-- **Machine Learning**: Scikit-learn sınıflandırıcıları
-- **Audio Processing**: Pygame + NumPy ses sentezi
+- **Machine Learning**: Scikit-learn classifiers
+- **Audio Processing**: Pygame + NumPy sound synthesis
 - **UI Framework**: Tkinter (Python native)
-- **Performance**: <50ms ses gecikmesi, >85% hareket doğruluğu
+- **Performance**: <50ms audio latency, >85% gesture accuracy
 
-## 📋 Sistem Gereksinimleri
+## 📋 System Requirements
 
-### ⚠️ ÖNEMLİ: Python Versiyonu
+### ⚠️ IMPORTANT: Python Version
 ```bash
-# ZORUNLU: Python 3.11 (MediaPipe desteği)
-# ❌ Python 3.13 DESTEKLENMIYOR
-# ✅ Python 3.8, 3.9, 3.10, 3.11 desteklenir
+# REQUIRED: Python 3.11 (MediaPipe support)
+# ❌ Python 3.13 NOT SUPPORTED
+# ✅ Python 3.8, 3.9, 3.10, 3.11 supported
 ```
 
-### 🖥️ Platform Desteği
-- **macOS**: ✅ Tam destek (Apple Silicon/Intel)
-- **Windows**: ✅ Desteklenir  
-- **Linux**: ✅ Desteklenir
+### 🖥️ Platform Support
+- **macOS**: ✅ Full support (Apple Silicon/Intel)
+- **Windows**: ✅ Supported
+- **Linux**: ✅ Supported
 
-### 📦 Gerekli Bileşenler
-- **Python 3.11**: MediaPipe uyumluluğu için zorunlu
-- **Webcam**: El algılama için gerekli
-- **Audio cihazı**: Ses çıkışı için
-- **4GB+ RAM**: MediaPipe ve TensorFlow Lite için
+### 📦 Required Components
+- **Python 3.11**: Required for MediaPipe compatibility
+- **Webcam**: Required for hand detection
+- **Audio device**: Required for sound output
+- **4GB+ RAM**: Required for MediaPipe and TensorFlow Lite
 
-## 🛠️ Kurulum Talimatları
+## 🛠️ Installation Instructions
 
-### 1️⃣ Python 3.11 Kurulumu
+### 1️⃣ Python 3.11 Installation
 
 **macOS (Homebrew):**
 ```bash
 brew install python@3.11
-brew install python-tk@3.11  # Tkinter için gerekli
+brew install python-tk@3.11  # Required for Tkinter
 ```
 
 **Windows:**
 ```bash
-# Python.org'dan Python 3.11.x indirin ve kurun
-# Tkinter otomatik dahil edilir
+# Download and install Python 3.11.x from Python.org
+# Tkinter is included automatically
 ```
 
 **Linux (Ubuntu/Debian):**
@@ -82,199 +74,194 @@ sudo apt update
 sudo apt install python3.11 python3.11-venv python3.11-tk
 ```
 
-### 2️⃣ Proje Kurulumu
+### 2️⃣ Project Setup
 
 ```bash
-# Projeyi klonlayın
-git clone https://github.com/ummugulsunn/gesture-groove-imageprocessing-final-project.git
-cd gesture-groove-imageprocessing-final-project
+# Clone the project
+git clone [repository-url]
+cd gesturegroove
 
-# Python 3.11 ile virtual environment oluşturun
-python3.11 -m venv .venv
+# Create virtual environment with Python 3.11
+python3.11 -m venv gesturegroove_env
 
-# Environment'ı aktive edin
-source .venv/bin/activate  # macOS/Linux
-# VEYA
-.venv\Scripts\activate  # Windows
+# Activate environment
+source gesturegroove_env/bin/activate  # macOS/Linux
+# OR
+gesturegroove_env\Scripts\activate  # Windows
 
-# Gerekli paketleri kurun
+# Install required packages
 pip install -r requirements.txt
 
-# Projeyi çalıştırın
+# Run the project
 python src/main.py
 ```
 
-### 3️⃣ Doğrulama Testleri
+### 3️⃣ Verification Tests
 
 ```bash
-# Virtual environment'ın aktif olduğundan emin olun
-source .venv/bin/activate  # macOS/Linux
-# VEYA
-.venv\Scripts\activate  # Windows
-
-# MediaPipe testi
+# MediaPipe test
 python -c "import mediapipe as mp; print('✅ MediaPipe:', mp.__version__)"
 
-# Tkinter testi  
-python -c "import tkinter; print('✅ Tkinter çalışıyor')"
+# Tkinter test
+python -c "import tkinter; print('✅ Tkinter is working')"
 
-# Pygame testi
+# Pygame test
 python -c "import pygame; print('✅ Pygame:', pygame.version.ver)"
 ```
 
-## 🎮 Kullanım Kılavuzu
+## 🎮 User Guide
 
-### 🎯 Temel Kullanım
-1. **Uygulamayı başlatın**: `python src/main.py`
-2. **Kamerayı açın**: "Kamerayı Başlat" butonuna tıklayın
-3. **El hareketleri yapın**: Kamera önünde farklı el pozisyonları gösterin
-4. **Müzik dinleyin**: Her hareket farklı ses çıkarır
+### 🎯 Basic Usage
+1. **Start the application**: `python src/main.py`
+2. **Open camera**: Click "Start Camera" button
+3. **Make hand gestures**: Show different hand positions in front of the camera
+4. **Listen to music**: Each gesture produces a different sound
 
-### 🎵 Desteklenen Hareketler
-| Hareket | Açıklama | Piano Sesi | Drums Sesi |
-|---------|----------|------------|------------|
-| ✋ **Açık El** | Tüm parmaklar açık | C4 notası | Kick drum |
-| ✊ **Yumruk** | Tüm parmaklar kapalı | D4 notası | Snare drum |
-| ☝️ **Yukarı İşaret** | Sadece işaret parmağı yukarı | E4 notası | Hi-hat |
-| 👇 **Aşağı İşaret** | İşaret parmağı aşağı | F4 notası | Crash cymbal |
-| ✌️ **Barış** | İşaret ve orta parmak açık | G4 notası | Ride cymbal |
+### 🎵 Supported Gestures
+| Gesture | Description | Piano Sound | Drums Sound |
+|---------|-------------|-------------|-------------|
+| ✋ **Open Hand** | All fingers open | C4 note | Kick drum |
+| ✊ **Fist** | All fingers closed | D4 note | Snare drum |
+| ☝️ **Point Up** | Only index finger up | E4 note | Hi-hat |
+| 👇 **Point Down** | Index finger down | F4 note | Crash cymbal |
+| ✌️ **Peace Sign** | Index and middle fingers open | G4 note | Ride cymbal |
 
-### 🥁 Beat Challenge Modu
-1. **"Challenge Başlat"** butonuna tıklayın
-2. **Ritim patternini takip edin** (görsel göstergeler)
-3. **Doğru zamanlama ile hareket yapın** 
-4. **Puan kazanın** (Perfect hit: 100 puan)
-5. **30 saniye süre** sonunda skorunuzu görün
+### 🥁 Beat Challenge Mode
+1. Click **"Start Challenge"** button
+2. **Follow the rhythm pattern** (visual indicators)
+3. **Make gestures with correct timing**
+4. **Earn points** (Perfect hit: 100 points)
+5. **View your score** after 30 seconds
 
-## 🔧 Geliştirici Notları
+## 🔧 Developer Notes
 
-### 📁 Proje Yapısı
+### 📁 Project Structure
 ```
 gesturegroove/
 ├── src/
-│   ├── gesture_recognition/    # 👩‍💻 Ümmügülsün - Hand detection
-│   ├── audio_engine/          # 👩‍💻 Ümmügülsün - Ses sistemi  
-│   ├── ui/                    # 👩‍💻 Ümmügülsün - Kullanıcı arayüzü
-│   ├── utils/                 # Ortak araçlar
-│   └── main.py               # Ana uygulama
-├── assets/sounds/             # Enstrüman ses dosyaları
-├── models/                   # ML modelleri
-├── docs/                     # Dokümantasyon
-└── tests/                    # Test dosyaları
+│   ├── gesture_recognition/    # Hand detection and gesture recognition
+│   ├── audio_engine/          # Sound system and audio processing
+│   ├── ui/                    # User interface and visualization
+│   ├── utils/                 # Common utilities
+│   └── main.py               # Main application
+├── assets/sounds/             # Instrument sound files
+├── models/                   # ML models
+├── docs/                     # Documentation
+└── tests/                    # Test files
 ```
 
-### 🎯 Performans Hedefleri
+### 🎯 Performance Targets
 - **FPS**: >25 (target: 30)
-- **Hareket Doğruluğu**: >85%
+- **Gesture Accuracy**: >85%
 - **Audio Latency**: <50ms
-- **Model Boyutu**: <100MB
+- **Model Size**: <100MB
 - **Memory Usage**: <500MB
 
-### 🧪 Test Konfigürasyonu
+### 🧪 Test Configuration
 ```bash
-# Birim testler
+# Unit tests
 python -m pytest tests/
 
-# El algılama testi
+# Hand detection test
 python tests/test_hand_detection.py
 
-# Ses sistemi testi  
+# Audio system test
 python tests/test_audio_engine.py
 
-# UI testi
+# UI test
 python tests/test_ui_components.py
 ```
 
-## 🐛 Sorun Giderme
+## 🐛 Troubleshooting
 
-### ❌ Yaygın Sorunlar
+### ❌ Common Issues
 
-**MediaPipe Kurulum Hatası:**
+**MediaPipe Installation Error:**
 ```bash
-# Çözüm: Python versiyonunu kontrol edin
-python --version  # 3.11.x olmalı
+# Solution: Check Python version
+python --version  # Should be 3.11.x
 pip install --upgrade mediapipe
 ```
 
-**Tkinter Bulunamadı (macOS):**
+**Tkinter Not Found (macOS):**
 ```bash
-# Çözüm: Python-tk kurun
+# Solution: Install Python-tk
 brew install python-tk@3.11
 ```
 
-**Kamera Erişim Hatası:**
+**Camera Access Error:**
 ```bash
-# Çözüm: Kamera izinlerini kontrol edin
+# Solution: Check camera permissions
 # macOS: System Preferences > Privacy > Camera
 ```
 
-**Ses Çıkmıyor:**
+**No Sound Output:**
 ```bash
-# Çözüm: Audio cihazlarını kontrol edin
+# Solution: Check audio devices
 python -c "import pygame; pygame.mixer.init(); print('Audio OK')"
 ```
 
-### 📊 Sistem Bilgisi Kontrolü
+### 📊 System Information Check
 ```bash
-# Detaylı sistem bilgisi
+# Detailed system information
 python src/utils/system_info.py
 ```
 
-## 📚 Dokümantasyon
+## 📚 Documentation
 
-- **[GÖREV_DAĞILIMI.md](GÖREV_DAĞILIMI.md)**: Detaylı takım görevi dağılımı
-- **[GestureGroove_Notebook.ipynb](GestureGroove_Notebook.ipynb)**: Teknik implementasyon rehberi
-- **[API Documentation](docs/api/)**: Kod API dokümantasyonu
+- **[TASK_DISTRIBUTION.md](TASK_DISTRIBUTION.md)**: Detailed team task distribution
+- **[GestureGroove_Notebook.ipynb](GestureGroove_Notebook.ipynb)**: Technical implementation guide
+- **[API Documentation](docs/api/)**: Code API documentation
 
-## 🎓 Eğitim Amaçları
+## 🎓 Educational Objectives
 
-Bu proje aşağıdaki konuları kapsar:
+This project covers the following topics:
 - **Computer Vision**: MediaPipe hands, landmark detection
-- **Machine Learning**: Gesture classification, feature engineering  
+- **Machine Learning**: Gesture classification, feature engineering
 - **Audio Processing**: Digital signal processing, wave synthesis
 - **UI/UX Design**: User interface principles, event handling
 - **Software Engineering**: Modular design, testing, documentation
 
-## 📈 Proje Durumu
+## 📈 Project Status
 
-**Genel İlerleme: 85% ✅**
+**Overall Progress: 85% ✅**
 
-| Modül | Durum | Completion |
-|-------|--------|------------|
-| 🟦 Gesture Recognition | ✅ MediaPipe entegre | 90% |
-| 🟨 Audio Engine | ✅ Tam fonksiyonel | 85% |  
-| 🟩 UI/UX | ✅ Modern arayüz | 80% |
-| 🧪 Testing | 🟡 Devam ediyor | 70% |
-| 📚 Documentation | ✅ Kapsamlı | 85% |
+| Module | Status | Completion |
+|--------|--------|------------|
+| 🟦 Gesture Recognition | ✅ MediaPipe integrated | 90% |
+| 🟨 Audio Engine | ✅ Fully functional | 85% |
+| 🟩 UI/UX | ✅ Modern interface | 80% |
+| 🧪 Testing | 🟡 In progress | 70% |
+| 📚 Documentation | ✅ Comprehensive | 85% |
 
-## 🏆 Gelecek Geliştirmeler
+## 🏆 Future Improvements
 
-- [ ] **Gesture Recorder**: Kustomel hareket ekleme
-- [ ] **MIDI Export**: Performansları MIDI olarak kaydetme
-- [ ] **Online Multiplayer**: Çoklu kullanıcı jam session
-- [ ] **VR Support**: Virtual reality entegrasyonu
-- [ ] **Mobile App**: React Native versiyonu
+- [ ] **Gesture Recorder**: Custom gesture addition
+- [ ] **MIDI Export**: Save performances as MIDI
+- [ ] **Online Multiplayer**: Multi-user jam session
+- [ ] **VR Support**: Virtual reality integration
+- [ ] **Mobile App**: React Native version
 
-## 🤝 Katkıda Bulunma
+## 🤝 Contributing
 
-Proje Image Processing dersi kapsamında geliştirilmiştir. Öneriler ve geri bildirimler için:
-- **Issues**: GitHub issues açın
+This project is developed as part of the Image Processing course. For suggestions and feedback:
+- **Issues**: Open GitHub issues
 - **Email**: [ümmügülsün@istun.edu.tr]
 
-## 📄 Lisans
+## 📄 License
 
-Bu proje eğitim amaçlı geliştirilmiştir. Ticari kullanım için izin gerekmektedir.
+This project is developed for educational purposes. Permission is required for commercial use.
 
 ---
 
-**⭐ Proje başarıyla tamamlandı! MediaPipe entegrasyonu ile yüksek kaliteli el algılama sağlanmıştır.**
+**⭐ Project successfully completed! High-quality hand detection achieved with MediaPipe integration.**
 
-**🔥 Son Test Sonuçları:**
-- ✅ MediaPipe Hands aktif ve çalışıyor
-- ✅ İki el algılama başarılı  
-- ✅ Hareket tanıma doğruluğu %90+
-- ✅ Real-time performans 30+ FPS
+**🔥 Latest Test Results:**
+- ✅ MediaPipe Hands active and working
+- ✅ Dual hand detection successful
+- ✅ Gesture recognition accuracy 90%+
+- ✅ Real-time performance 30+ FPS
 - ✅ Audio latency <50ms
-- ✅ Beat Challenge tam fonksiyonel
+- ✅ Beat Challenge fully functional
 
 **🎯 Recommended Setup:** Python 3.11 + MediaPipe 0.10.21 + macOS/Windows 
