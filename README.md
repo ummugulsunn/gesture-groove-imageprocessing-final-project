@@ -2,7 +2,7 @@
 
 **Sabancı Üniversitesi - Image Processing Dersi Final Projesi**
 
-3 kişilik ekip projesi: El hareketlerini algılayarak gerçek zamanlı müzik çalan interaktif uygulama.
+El hareketlerini algılayarak gerçek zamanlı müzik çalan interaktif uygulama.
 
 ## 🎯 Proje Özeti
 
@@ -147,9 +147,9 @@ python -c "import pygame; print('✅ Pygame:', pygame.version.ver)"
 ```
 gesturegroove/
 ├── src/
-│   ├── gesture_recognition/    # 👩‍💻 Ümmü Gülsün - Hand detection
-│   ├── audio_engine/          # 🟨 Ümmu Gülsün - Ses sistemi  
-│   ├── ui/                    # 🟩 Sueda - Kullanıcı arayüzü
+│   ├── gesture_recognition/    # 👩‍💻 Ümmügülsün - Hand detection
+│   ├── audio_engine/          # 👩‍💻 Ümmügülsün - Ses sistemi  
+│   ├── ui/                    # 👩‍💻 Ümmügülsün - Kullanıcı arayüzü
 │   ├── utils/                 # Ortak araçlar
 │   └── main.py               # Ana uygulama
 ├── assets/sounds/             # Enstrüman ses dosyaları

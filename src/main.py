@@ -3,7 +3,7 @@
 GestureGroove Main Application
 Application that plays music with hand gestures
 
-Development Team: Ümmü Gülsün
+Development Team: Ümmügülsün
 Course: Image Processing
 """
 
@@ -637,7 +637,7 @@ def main():
     print("=" * 60)
     print("🎵 GestureGroove: El Hareketleriyle Müzik Çalan Uygulama")
     print("📚 Image Processing Dersi Projesi")
-    print("👩‍💻 Geliştirici: Ümmü Gülsün")
+    print("👩‍💻 Geliştirici: Ümmügülsün")
     print("=" * 60)
     
     try:
