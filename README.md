@@ -1,6 +1,6 @@
 # 🎵 GestureGroove: El Hareketleriyle Müzik Çalan Uygulama
 
-**Sabancı Üniversitesi - Image Processing Dersi Final Projesi**
+**İstanbul Sağlık ve Teknoloji Üniversitesi - Image Processing Dersi Final Projesi**
 
 El hareketlerini algılayarak gerçek zamanlı müzik çalan interaktif uygulama.
 
@@ -254,7 +254,7 @@ Bu proje aşağıdaki konuları kapsar:
 
 Proje Image Processing dersi kapsamında geliştirilmiştir. Öneriler ve geri bildirimler için:
 - **Issues**: GitHub issues açın
-- **Email**: [ekip-email@sabanciuniv.edu]
+- **Email**: [ümmügülsün@istun.edu.tr]
 
 ## 📄 Lisans
 

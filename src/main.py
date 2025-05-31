@@ -4,7 +4,7 @@ GestureGroove Main Application
 Application that plays music with hand gestures
 
 Development Team: Ümmügülsün
-Course: Image Processing
+Course: Image Processing - İstanbul Sağlık ve Teknoloji Üniversitesi
 """
 
 import sys
@@ -636,7 +636,7 @@ def main():
     """Main function"""
     print("=" * 60)
     print("🎵 GestureGroove: El Hareketleriyle Müzik Çalan Uygulama")
-    print("📚 Image Processing Dersi Projesi")
+    print("📚 İstanbul Sağlık ve Teknoloji Üniversitesi - Image Processing Dersi Projesi")
     print("👩‍💻 Geliştirici: Ümmügülsün")
     print("=" * 60)
     
