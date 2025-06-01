@@ -2,51 +2,38 @@
 # Requirements - Python 3.11+ Gerekli
 # MediaPipe tabanlı el algılama için optimized
 
-# Core Computer Vision & Machine Learning
-mediapipe==0.10.21          # Ana el algılama ve landmark çıkarımı
-opencv-contrib-python==4.11.0.86  # Görüntü işleme (MediaPipe ile birlikte)
-scikit-learn==1.6.1         # Hareket sınıflandırması
-numpy==1.26.4               # Sayısal hesaplamalar
+# Core Dependencies
+mediapipe>=0.10.21,<0.11.0
+opencv-contrib-python>=4.8.0,<5.0.0
+scikit-learn>=1.3.0,<2.0.0
+numpy>=1.24.0,<2.0.0
 
 # Audio Processing
-pygame==2.6.1               # Ses çalma ve enstrüman sistemi
-sounddevice==0.5.2          # Ses cihazı erişimi (MediaPipe dependency)
+pygame>=2.5.0,<3.0.0
+sounddevice>=0.4.0,<1.0.0
 
-# UI Components  
-pillow==11.2.1              # Görüntü işleme ve UI
-matplotlib==3.10.3          # Görselleştirme (opsiyonel analiz için)
+# UI Components
+pillow>=10.0.0,<12.0.0
+matplotlib>=3.7.0,<4.0.0
 
-# Math & Scientific Computing
-scipy==1.15.3               # Bilimsel hesaplamalar
-jax==0.6.1                  # MediaPipe dependency (GPU acceleration)
-jaxlib==0.6.1               # JAX backend
+# Scientific Computing
+scipy>=1.10.0,<2.0.0
 
-# Utilities
-protobuf==4.25.8            # MediaPipe model formatı
-flatbuffers==25.2.10        # MediaPipe serializasyon
-attrs==25.3.0               # MediaPipe dependency
-absl-py==2.3.0              # MediaPipe logging
+# MediaPipe Dependencies
+protobuf>=4.24.0,<5.0.0
+flatbuffers>=23.0.0,<26.0.0
+attrs>=23.0.0,<26.0.0
+absl-py>=2.0.0,<3.0.0
 
 # Data Processing
-joblib==1.5.1               # Paralel işleme (scikit-learn dependency)
-threadpoolctl==3.6.0        # Thread kontrolü
+joblib>=1.3.0,<2.0.0
+threadpoolctl>=3.0.0,<4.0.0
 
-# Visualization Dependencies
-contourpy==1.3.2            # Matplotlib dependency
-cycler==0.12.1              # Matplotlib dependency
-fonttools==4.58.1           # Font yönetimi
-kiwisolver==1.4.8           # Layout engine
-packaging==25.0             # Paket yönetimi
-pyparsing==3.2.3            # Parsing utilities
-python-dateutil==2.9.0.post0  # Tarih/saat utilities
-six==1.17.0                 # Python 2/3 uyumluluğu
-
-# Advanced ML Dependencies
-ml_dtypes==0.5.1            # Machine learning data types
-opt_einsum==3.4.0           # Optimized tensor operations
-sentencepiece==0.2.0        # MediaPipe NLP dependency
-cffi==1.17.1                # Foreign function interface
-pycparser==2.22             # C parser
+# Testing & Development
+pytest>=7.0.0,<8.0.0
+pytest-cov>=4.0.0,<5.0.0
+flake8>=6.0.0,<7.0.0
+black>=23.0.0,<24.0.0
 
 # KURULUM TALİMATLARI:
 # 1. Python 3.11 kurun: brew install python@3.11
