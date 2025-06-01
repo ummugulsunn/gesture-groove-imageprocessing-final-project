@@ -24,12 +24,6 @@ jobs:
         which python
         python -m pip --version
         
-    - name: Check available OpenGL packages
-      run: |
-        apt-cache search mesa-gl
-        apt-cache search libgl
-        apt-cache policy libgl1
-        
     - name: Install system dependencies
       run: |
         sudo apt-get update
@@ -39,17 +33,19 @@ jobs:
         # Ubuntu 24.04 için OpenGL bağımlılıkları
         sudo apt-get install -y libgl1
         sudo apt-get install -y libgl1-mesa-dri
-        sudo apt-get install -y libgl1-mesa-glx
         sudo apt-get install -y mesa-utils
         sudo apt-get install -y libglib2.0-0
         sudo apt-get install -y libglu1-mesa
         sudo apt-get install -y libegl1
         sudo apt-get install -y libgles2
+        sudo apt-get install -y libglx0
+        sudo apt-get install -y libglx-mesa0
+        sudo apt-get install -y xvfb  # Virtual framebuffer for headless testing
         
-    - name: Verify OpenGL installation
+    - name: Start virtual framebuffer
       run: |
-        glxinfo | grep "OpenGL version"
-        glxinfo | grep "OpenGL vendor"
+        Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+        echo "export DISPLAY=:99" >> $GITHUB_ENV
         
     - name: Install base dependencies
       run: |
@@ -73,6 +69,7 @@ jobs:
         PYTHONPATH: ${{ github.workspace }}
         PYTHONUNBUFFERED: 1
         TF_CPP_MIN_LOG_LEVEL: 2
+        DISPLAY: :99
         
     - name: Run pytest
       run: |
@@ -81,6 +78,7 @@ jobs:
         PYTHONPATH: ${{ github.workspace }}
         PYTHONUNBUFFERED: 1
         TF_CPP_MIN_LOG_LEVEL: 2
+        DISPLAY: :99
         
     - name: Lint with flake8
       run: |
