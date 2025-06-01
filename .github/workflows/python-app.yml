@@ -30,8 +30,12 @@ jobs:
         sudo apt-get install -y python3-tk
         sudo apt-get install -y portaudio19-dev
         sudo apt-get install -y libsndfile1
-        sudo apt-get install -y libgl1-mesa-glx
+        # Ubuntu 24.04 için güncellenmiş OpenGL bağımlılıkları
+        sudo apt-get install -y libgl1
         sudo apt-get install -y libglib2.0-0
+        sudo apt-get install -y libglu1-mesa
+        sudo apt-get install -y libegl1
+        sudo apt-get install -y libgles2
         
     - name: Install base dependencies
       run: |
