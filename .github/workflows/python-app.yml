@@ -24,18 +24,32 @@ jobs:
         which python
         python -m pip --version
         
+    - name: Check available OpenGL packages
+      run: |
+        apt-cache search mesa-gl
+        apt-cache search libgl
+        apt-cache policy libgl1
+        
     - name: Install system dependencies
       run: |
         sudo apt-get update
         sudo apt-get install -y python3-tk
         sudo apt-get install -y portaudio19-dev
         sudo apt-get install -y libsndfile1
-        # Ubuntu 24.04 için güncellenmiş OpenGL bağımlılıkları
+        # Ubuntu 24.04 için OpenGL bağımlılıkları
         sudo apt-get install -y libgl1
+        sudo apt-get install -y libgl1-mesa-dri
+        sudo apt-get install -y libgl1-mesa-glx
+        sudo apt-get install -y mesa-utils
         sudo apt-get install -y libglib2.0-0
         sudo apt-get install -y libglu1-mesa
         sudo apt-get install -y libegl1
         sudo apt-get install -y libgles2
+        
+    - name: Verify OpenGL installation
+      run: |
+        glxinfo | grep "OpenGL version"
+        glxinfo | grep "OpenGL vendor"
         
     - name: Install base dependencies
       run: |
