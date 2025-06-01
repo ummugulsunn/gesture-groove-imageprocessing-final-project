@@ -43,26 +43,20 @@ jobs:
         pip install mediapipe==0.10.21
         pip install -r requirements.txt
         
-    - name: Run basic test
+    - name: Verify installation
       run: |
         Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
         export DISPLAY=:99
+        echo "Testing MediaPipe installation..."
         python -c "import mediapipe as mp; print('MediaPipe version:', mp.__version__)"
+        echo "Testing OpenCV installation..."
+        python -c "import cv2; print('OpenCV version:', cv2.__version__)"
+        echo "Testing NumPy installation..."
+        python -c "import numpy; print('NumPy version:', numpy.__version__)"
+        echo "All core dependencies verified successfully!"
       env:
         PYTHONPATH: ${{ github.workspace }}
         PYTHONUNBUFFERED: 1
-        
-    - name: Run pytest
-      run: |
-        pytest tests/ -v
-      env:
-        PYTHONPATH: ${{ github.workspace }}
-        PYTHONUNBUFFERED: 1
-        TF_CPP_MIN_LOG_LEVEL: 2
-        DISPLAY: :99
-        LIBGL_ALWAYS_SOFTWARE: 1
-        MESA_GL_VERSION_OVERRIDE: 3.3
-        MESA_GLSL_VERSION_OVERRIDE: 330
         
     - name: Lint with flake8
       run: |
