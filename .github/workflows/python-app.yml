@@ -18,27 +18,51 @@ jobs:
       with:
         python-version: '3.11'
         
+    - name: Debug Python environment
+      run: |
+        python --version
+        which python
+        python -m pip --version
+        
     - name: Install system dependencies
       run: |
         sudo apt-get update
         sudo apt-get install -y python3-tk
         sudo apt-get install -y portaudio19-dev
         sudo apt-get install -y libsndfile1
-        sudo apt-get install -y libgl1-mesa-glx  # MediaPipe için OpenGL
-        sudo apt-get install -y libglib2.0-0     # MediaPipe için GLib
+        sudo apt-get install -y libgl1-mesa-glx
+        sudo apt-get install -y libglib2.0-0
         
-    - name: Install Python dependencies
+    - name: Install base dependencies
       run: |
-        python -m pip install --upgrade pip
-        # MediaPipe için özel kurulum
+        python -m pip install --upgrade pip setuptools wheel
+        pip install numpy==1.24.3  # MediaPipe için spesifik numpy versiyonu
+        
+    - name: Install MediaPipe
+      run: |
         pip install mediapipe==0.10.21
-        # Diğer bağımlılıklar
-        pip install -r requirements.txt
-        pip install pytest pytest-cov flake8 black
-        
-    - name: Verify MediaPipe installation
-      run: |
         python -c "import mediapipe as mp; print('MediaPipe version:', mp.__version__)"
+        
+    - name: Install remaining dependencies
+      run: |
+        pip install -r requirements.txt
+        pip list  # Debug: Tüm kurulu paketleri göster
+        
+    - name: Run basic tests
+      run: |
+        python -c "import mediapipe; import cv2; import numpy; print('All core imports successful')"
+      env:
+        PYTHONPATH: ${{ github.workspace }}
+        PYTHONUNBUFFERED: 1
+        TF_CPP_MIN_LOG_LEVEL: 2
+        
+    - name: Run pytest
+      run: |
+        pytest tests/ -v
+      env:
+        PYTHONPATH: ${{ github.workspace }}
+        PYTHONUNBUFFERED: 1
+        TF_CPP_MIN_LOG_LEVEL: 2
         
     - name: Lint with flake8
       run: |
@@ -50,15 +74,6 @@ jobs:
     - name: Check formatting with black
       run: |
         black . --check
-        
-    - name: Run tests
-      run: |
-        pytest tests/ --cov=src/ --cov-report=term-missing
-      env:
-        PYTHONPATH: ${{ github.workspace }}
-        # MediaPipe için gerekli environment variables
-        PYTHONUNBUFFERED: 1
-        TF_CPP_MIN_LOG_LEVEL: 2  # TensorFlow logging'i azalt
         
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
